@@ -16,7 +16,7 @@
 import sys
 
 try:
-    from flask import Flask, render_template
+    from flask import Flask, redirect, render_template, request
 except ImportError:
     sys.exit("[!] Flask module not found. Install it by 'pip3 install flask'")
 
@@ -26,3 +26,21 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+
+
+def write_to_file(data):
+    with open('submits.csv', mode='a') as database:
+        email = data.get("email")
+        subject = data.get("subject")
+        message = data.get("message")
+        database.write(f'\n{email},{subject},{message}')
+
+
+@app.route('/send_message', methods=['POST'])
+def send_message():
+    if request.method == 'POST':
+        data = request.form.to_dict()
+        write_to_file(data)
+        return render_template('/thankyou.html')
+    else:
+        return render_template('/error.html')
