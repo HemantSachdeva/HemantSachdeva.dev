@@ -32,11 +32,11 @@ def bot_message(data):
     email = data.get("email")
     subject = data.get("subject")
     message = data.get("message")
-    TEXT_MESSAGE = f"Email:```{email}```\nSubject:```{subject}```\nMessage:```{message}```"
+    TEXT_MESSAGE = f"Email: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
     url = f"https://api.telegram.org/bot{BOT_API}/sendMessage"
     # use curl to send the message to the bot API and the chat ID of telegram group where the bot is joined
     os.system(
-        f"curl -s -X POST '{url}' -d chat_id={CHAT_ID} -d text='{TEXT_MESSAGE}' -d parse_mode='Markdown'")
+        f"curl -s -X POST '{url}' -d chat_id={CHAT_ID} -d text='{TEXT_MESSAGE}' -d parse_mode='HTML'")
 
 
 @app.route('/')
