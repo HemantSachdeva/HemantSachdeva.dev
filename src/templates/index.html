@@ -117,19 +117,21 @@
 						</div>
 						<div class="prt_about_experience">
 							<div class="row">
+                                {% for exp in context.experiences %}
 								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 									<div class="prt_about_experiencebox">
 										<div class="prt_about_experience_year">
-											<h1>2012</h1>
-											<h4>July to 2013 Sep</h4>
+											<h1>{{ exp.joining_year }}</h1>
+											<h4>{{ exp.duration }}</h4>
 										</div>
 										<div class="prt_about_experience_info">
-											<h4>Junior Ui/Ux Designer</h4>
-											<span>Amazon</span>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+											<h4>{{ exp.title }}</h4>
+											<span><a href="{{ exp.link }}">{{ exp.company }}</a></span>
+											<p>{{ exp.description }}</p>
 										</div>
 									</div>
 								</div>
+                                {% endfor %}
 							</div>
 						</div>
 					</div>

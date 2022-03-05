@@ -25,3 +25,30 @@ educations = [
         'link': 'https://no2patiala.kvs.ac.in/'
     }
 ]
+
+experiences = [
+    {
+        'joining_year': '2020',
+        'duration': 'October to Present',
+        'title': 'Maintainer for Xiaomi Mi A3',
+        'company': 'Evolution-X',
+        'description': 'Evolution X is a flashable Custom ROM to bring a true Pixel feel to your Android Device at first glance, with many additional configurations at your disposal. We aim to provide frequent builds with monthly security patches from the latest AOSP source. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3.',
+        'link': 'http://evolution-x.org'
+    },
+    {
+        'joining_year': '2021',
+        'duration': 'March to December, 2021',
+        'title': 'Maintainer for Xiaomi Mi A3',
+        'company': 'SkyHawk Recovery Project',
+        'description': 'Android recovery based on TeamWin Recovery Project with rich UI and Features. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3. (currently the updates are on hold because of some encryption issues for non-dynamic partitions)',
+        'link': 'https://shrp.github.io'
+    },
+    {
+        'joining_year': '2021',
+        'duration': 'August to September, 2021',
+        'title': 'OpenCV and Computer Vision Intern',
+        'company': 'IETE, Mumbai',
+        'description': 'We covered various topics like: Watermarking on an img, Face Detection and Color Detection in an Image/Video, Various GUI based image processing systems using appJar (The easiest way to create GUIs in python) Making graphs using Matplotlib, etc all in python.',
+        'link': 'https://www.ieeebombay.org/iete/aboutIETE.htm'
+    }
+]
