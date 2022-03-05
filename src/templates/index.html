@@ -89,18 +89,20 @@
 						</div>
 						<div class="prt_about_learnsection">
 							<div class="row">
+                                {% for edu in context.educations %}
 								<div class="col-xl-6 offset-xl-6 col-md-12 offset-md-12 col-sm-12 col-xs-12">
 									<div class="prt_about_learnbox_right">
 										<div class="prt_about_learnbox_year">
-											<h1>2004</h1>
+											<h1>{{ edu.year }}</h1>
 										</div>
 										<div class="prt_about_learnbox_info">
-											<h4>Diploma In UI/UX Design</h4>
-											<span>New York</span>
-											<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+											<h4>{{ edu.title }}</h4>
+											<span>{{ edu.location }}</span>
+                                            <p><a href="{{ edu.link }}">{{ edu.institute }}</a></p>
 										</div>
 									</div>
 								</div>
+                                {% endfor %}
 							</div>
 						</div>
 					</div>

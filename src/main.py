@@ -15,7 +15,7 @@
 
 import os
 import sys
-from src.life import about_me
+from src.life import about_me, educations
 
 try:
     from flask import Flask, render_template, request
@@ -28,6 +28,7 @@ application = Flask(__name__)
 @application.route('/')
 def index():
     context = {
-        'about': about_me
+        'about': about_me,
+        'educations': educations
     }
     return render_template('index.html', context=context)
