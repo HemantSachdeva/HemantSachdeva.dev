@@ -288,10 +288,6 @@ button:focus {
   font-size: 150px;
   color: #ffffff;
   font-weight: bold;
-  background: url(../assets/images/content/banner_text_bg.jpg) no-repeat;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-size: cover;
   background-position: -41px -85px;
   max-width: 570px;
