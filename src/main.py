@@ -25,6 +25,22 @@ except ImportError:
 application = Flask(__name__)
 
 
+def bot_message(data):
+    # Get the bot API key from the environment variable
+    BOT_API = os.getenv("BOT_API")
+    # Get the chat ID from the environment variable
+    CHAT_ID = os.getenv("CHAT_ID")
+    name = data.get("name")
+    email = data.get("email")
+    subject = data.get("subject")
+    message = data.get("message")
+    TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
+    url = f"https://api.telegram.org/bot{BOT_API}/sendMessage"
+    # use curl to send the message to the bot API and the chat ID of telegram group where the bot is joined
+    os.system(
+        f"curl -s -X POST '{url}' -d chat_id={CHAT_ID} -d text='{TEXT_MESSAGE}' -d parse_mode='HTML'")
+
+
 @application.route('/')
 def index():
     context = {
@@ -33,3 +49,10 @@ def index():
         'experiences': experiences
     }
     return render_template('index.html', context=context)
+
+
+@application.route('/send_message', methods=['POST'])
+def send_message():
+    data = request.form.to_dict()
+    bot_message(data)
+    return render_template('index.html', context=None)
