@@ -15,6 +15,7 @@
 
 import os
 import sys
+from src.life import about_me
 
 try:
     from flask import Flask, render_template, request
@@ -26,4 +27,7 @@ application = Flask(__name__)
 
 @application.route('/')
 def index():
-    return render_template('index.html')
+    context = {
+        'about': about_me
+    }
+    return render_template('index.html', context=context)
