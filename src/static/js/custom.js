@@ -284,5 +284,17 @@ Assigned to: ThemeForest
         });
       }
     });
+
+    // Typed JS
+    $(".typed").each(function () {
+      var _this = $(this);
+      var typed = new Typed(this, {
+        stringsElement: _this.parent().find(".typed-strings")[0],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backSpeed: 80,
+        loop: true,
+      });
+    });
   });
 })();

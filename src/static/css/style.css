@@ -1632,3 +1632,7 @@ button:focus {
     height: 900px;
   }
 }
+
+.typed-cursor {
+  display: none;
+}
