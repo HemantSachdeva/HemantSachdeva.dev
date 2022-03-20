@@ -8,21 +8,24 @@ educations = [
         'title': 'B.Tech, Computer Science & Engineering',
         'institute': 'Baba Banda Singh Bahadur Engineering College',
         'location': 'Fatehgarh Sahib, Punjab, India',
-        'link': 'http://www.bbsbec.ac.in/'
+        'link': 'http://www.bbsbec.ac.in/',
+        'align': 'left'
     },
     {
         'year': '2019',
         'title': 'Class XII CBSE Board',
         'institute': 'Kendriya Vidyalaya No. 2 DMW',
         'location': 'Patiala, Punjab, India',
-        'link': 'https://no2patiala.kvs.ac.in/'
+        'link': 'https://no2patiala.kvs.ac.in/',
+        'align': 'right'
     },
     {
         'year': '2017',
         'title': 'Class X CBSE Board',
         'institute': 'Kendriya Vidyalaya No. 2 DMW',
         'location': 'Patiala, Punjab, India',
-        'link': 'https://no2patiala.kvs.ac.in/'
+        'link': 'https://no2patiala.kvs.ac.in/',
+        'align': 'left'
     }
 ]
 

@@ -100,8 +100,13 @@
 						<div class="prt_about_learnsection">
 							<div class="row">
 								{% for edu in context.educations %}
+								{% if edu.align == 'right' %}
+								<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+									<div class="prt_about_learnbox_left">
+								{% else %}
 								<div class="col-xl-6 offset-xl-6 col-md-12 offset-md-12 col-sm-12 col-xs-12">
 									<div class="prt_about_learnbox_right">
+								{% endif %}
 										<div class="prt_about_learnbox_year">
 											<h1>{{ edu.year }}</h1>
 										</div>
