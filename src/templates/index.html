@@ -401,7 +401,7 @@
 								<div class="owl-carousel owl-theme">
                                     {% for org in context.contributions %}
 									<div class="item">
-										<a href="{{ org.link }}" target="_blank"><img src="{{ org.logo }}" alt="{{ org.name }}"></a>
+										<a href="{{ org.link }}" target="_blank"><img src="{{ org.logo }}" alt="{{ org.name }}" title="{{ org.name }}"></a>
                                     </div>
                                     {% endfor %}
 								</div>
