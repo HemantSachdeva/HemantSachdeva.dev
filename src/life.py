@@ -2,6 +2,44 @@ about_me = 'I am a flexible person seeking employment which will allow developme
             I am a self-starter and I am always looking for new opportunities. Python finds me interesting and I wish to establish a long-term career in a company \
             where I may utilize my Backend Developer professional skills and knowledge to be an effective Backend Developer and inspiration to those around me.'
 
+contributions = [
+    {
+        'name': 'Evolution X',
+        'link': 'http://evolution-x.org',
+        'logo': '/static/assets/images/content/clients/evolution-x.png'
+    },
+    {
+        'name': 'SkyHawk Recovery Project',
+        'link': 'https://shrp.github.io',
+        'logo': '/static/assets/images/content/clients/shrp.png'
+    },
+    {
+        'name': 'TimeMarks',
+        'link': 'https://timemarks.in/',
+        'logo': '/static/assets/images/content/clients/timemarks.png'
+    },
+    {
+        'name': 'GDSC BBSBEC',
+        'link': 'https://gdsc.community.dev/baba-banda-singh-bahadur-engineering-college-fatehgarh-sahib/',
+        'logo': '/static/assets/images/content/clients/gdsc-bbsbec.png'
+    },
+    {
+        'name': 'GirlScript Summer of Code',
+        'link': 'https://gssoc.girlscript.tech/',
+        'logo': '/static/assets/images/content/clients/gssoc.png'
+    },
+    {
+        'name': 'GDSC WOW',
+        'link': 'https://www.gdscwow.tech',
+        'logo': '/static/assets/images/content/clients/gdsc-wow.png'
+    },
+    {
+        'name': 'Docusaurus - Meta / Facebook',
+        'link': 'https://github.com/facebook/docusaurus',
+        'logo': '/static/assets/images/content/clients/meta.png'
+    }
+]
+
 educations = [
     {
         'year': '2019 - 2023',

@@ -388,17 +388,22 @@
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="prt_heading_wrapper">
 								<div class="prt_heading">
-									<h1>Clients</h1>
-									<p>Worked With</p>
+									<h1>Contributing</h1>
+                                    <div class="typed-strings">
+									    <p>Organizations</p>
+                                    </div>
+                                    <p class="typed"></p>
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 							<div class="prt_client_slider">
 								<div class="owl-carousel owl-theme">
+                                    {% for org in context.contributions %}
 									<div class="item">
-										<a href=""><img src="../static/assets/images/content/client1.png" alt="Client"></a>
-									</div>
+										<a href="{{ org.link }}" target="_blank"><img src="{{ org.logo }}" alt="{{ org.name }}"></a>
+                                    </div>
+                                    {% endfor %}
 								</div>
 							</div>
 						</div>

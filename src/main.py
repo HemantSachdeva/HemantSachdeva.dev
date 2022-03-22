@@ -15,7 +15,7 @@
 
 import os
 import sys
-from src.life import about_me, educations, experiences
+from src.life import about_me, contributions, educations, experiences
 
 try:
     from flask import Flask, render_template, request
@@ -45,6 +45,7 @@ def bot_message(data):
 def index():
     context = {
         'about': about_me,
+        'contributions': contributions,
         'educations': educations,
         'experiences': experiences
     }
