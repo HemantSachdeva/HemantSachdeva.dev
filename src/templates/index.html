@@ -41,7 +41,7 @@
 			<a href="#about" class="prt_top">about</a>
 			<a href="#contact" class="prt_right">contact</a>
 			<a href="#services" class="prt_bottom">strength</a>
-			<a href="#portfolio" class="prt_left">portfolio</a>
+			<a href="#portfolio" class="prt_left">gallery</a>
 		</div>
 		<div class="container">
 			<div class="row">
@@ -433,36 +433,28 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="prt_heading_wrapper">
 							<div class="prt_heading">
-								<h1>portfolio</h1>
-								<p>MY work</p>
+								<h1>Gallery</h1>
+                                <div class="typed-strings">
+								    <p>Framed Moments</p>
+                                </div>
+                                <p class="typed"></p>
 							</div>
 						</div>
 					</div>
 					<div class="prt_portfolio_box popup-gallery">
 						<div class="row">
-							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 prt_loadmore">
-								<a class="imageopen" href="../static/assets/images/content/port1_big.jpg" title="">
+                        {% for photo in context.gallery %}
+							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+								<a class="imageopen" href="{{ photo.image }}" title="{{ photo.title }}">
 									<div class="prt_portfolio_img">
-										<img src="../static/assets/images/content/port1.jpg" alt="Portfolio">
+										<img src="{{ photo.image }}" alt="Portfolio">
 										<div class="prt_portfolio_text">
-											<h4>box mockup design</h4>
-											<p>Mockup</p>
+											<h4>{{ photo.title }}</h4>
 										</div>
 									</div>
 								</a>
-								<a class="popup-youtube" href="https://www.youtube.com/watch?v=tqKpk1wABuI" title="">
-									<div class="prt_portfolio_img">
-										<img src="../static/assets/images/content/port2.jpg" alt="Portfolio">
-										<div class="prt_portfolio_text">
-											<h4>Click and open video</h4>
-											<p>video</p>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-								<button class="prt_btn" id="loadMore">load more</button>
-							</div>
+                            </div>
+                        {% endfor %}
 						</div>
 					</div>
 				</div>

@@ -15,7 +15,7 @@
 
 import os
 import sys
-from src.life import about_me, contributions, educations, experiences
+from src.life import about_me, contributions, educations, experiences, gallery
 
 try:
     from flask import Flask, render_template, request
@@ -47,7 +47,8 @@ def index():
         'about': about_me,
         'contributions': contributions,
         'educations': educations,
-        'experiences': experiences
+        'experiences': experiences,
+        'gallery': gallery
     }
     return render_template('index.html', context=context)
 

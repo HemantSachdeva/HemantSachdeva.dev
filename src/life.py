@@ -93,3 +93,58 @@ experiences = [
         'link': 'https://www.ieeebombay.org/iete/aboutIETE.htm'
     }
 ]
+
+gallery = [
+    {
+        'title': 'SQL - Datacamp',
+        'image': '/static/assets/images/content/gallery/sql-datacamp.jpg'
+    },
+    {
+        'title': 'App Dev Team Lead',
+        'image': '/static/assets/images/content/gallery/app-dev-team-lead.jpg'
+    },
+    {
+        'title': 'Python - Datacamp',
+        'image': '/static/assets/images/content/gallery/python-datacamp.jpg'
+    },
+    {
+        'title': '30 Days Google Cloud Program',
+        'image': '/static/assets/images/content/gallery/30-days-google-cloud-program.jpeg'
+    },
+    {
+        'title': 'Awarded by SourceForge',
+        'image': '/static/assets/images/content/gallery/award-by-sfg.jpeg'
+    },
+    {
+        'title': 'Google Cloud Skill Badges',
+        'image': '/static/assets/images/content/gallery/google-cloud-skill-badges.png'
+    },
+    {
+        'title': 'Dev Fest India 2021',
+        'image': '/static/assets/images/content/gallery/devfest-india-2021.jpeg'
+    },
+    {
+        'title': 'IEEE UpSkill Malaysia 2021',
+        'image': '/static/assets/images/content/gallery/up-skill-malaysia-2021.jpeg'
+    },
+    {
+        'title': 'Awarded by Google Developers',
+        'image': '/static/assets/images/content/gallery/asj-facilitator.png'
+    },
+    {
+        'title': 'OpenCV Internship',
+        'image': '/static/assets/images/content/gallery/iete-opencv-internship.jpeg'
+    },
+    {
+        'title': 'Mentor at GSSoC 2021',
+        'image': '/static/assets/images/content/gallery/gssoc-mentor.jpeg',
+    },
+    {
+        'title': 'Diwali With Qwiklabs 2021',
+        'image': '/static/assets/images/content/gallery/diwali-with-qwiklabs-2021.jpeg',
+    },
+    {
+        'title': 'Evolution X - Xiaomi Mi A3',
+        'image': '/static/assets/images/content/gallery/evolution-x-xiaomi-mi-a3.jpeg'
+    },
+]
