@@ -69,6 +69,15 @@ educations = [
 
 experiences = [
     {
+        'joining_year': '2022',
+        'duration': 'February to Present',
+        'title': 'Python Intern - Flask, JWT, MongoDB ',
+        'company': 'TimeMarks',
+        'description': 'I am currently working as a Python Intern at TimeMarks. I am working on writing APIs for a Flutter app and it\'s web version and managing the official website for the same. \
+                        Flask, JWT and MongoDB are the tech stacks being used.',
+        'link': 'https://timemarks.in/'
+    },
+    {
         'joining_year': '2020',
         'duration': 'October to Present',
         'title': 'Maintainer for Xiaomi Mi A3',
