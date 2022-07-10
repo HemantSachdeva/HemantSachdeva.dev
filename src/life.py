@@ -19,6 +19,16 @@ contributions = [
         'logo': '/static/assets/images/content/clients/timemarks.png'
     },
     {
+        'name': 'Studyem',
+        'link': 'https://studyem.io/',
+        'logo': '/static/assets/images/content/clients/studyem.png'
+    },
+    {
+        'name': 'Penzl',
+        'link': 'https://penzl.in/',
+        'logo': '/static/assets/images/content/clients/penzl.png'
+    },
+    {
         'name': 'GDSC BBSBEC',
         'link': 'https://gdsc.community.dev/baba-banda-singh-bahadur-engineering-college-fatehgarh-sahib/',
         'logo': '/static/assets/images/content/clients/gdsc-bbsbec.png'
@@ -70,12 +80,20 @@ educations = [
 experiences = [
     {
         'joining_year': '2022',
+        'duration': 'June to Present',
+        'title': 'Software Developer',
+        'company': 'Penzl',
+        'description': 'Working as a Software Developer I am responsible for developing and optimizing the APIs, MySQL Database and web applications of the project which is made to smoothen the life of educators. '
+                        'I also implemented the Tus protocol based API endpoint for highly optimized and resumable file uploads.',
+        'link': 'https://penzl.in/'
+    },
+    {
+        'joining_year': '2022',
         'duration': 'February to Present',
-        'title': 'Python Intern - Flask, JWT, MongoDB ',
-        'company': 'TimeMarks',
-        'description': 'I am currently working as a Python Intern at TimeMarks. I am working on writing APIs for a Flutter app and it\'s web version and managing the official website for the same. \
-                        Flask, JWT and MongoDB are the tech stacks being used.',
-        'link': 'https://timemarks.in/'
+        'title': 'Backend Developer',
+        'company': 'Studyem',
+        'description': 'Working as a Backend Developer I am responsible for developing the APIs written with Flask-RESTful libraries for performing CRUD (Create, Read, Update, Delete) operations on our MongoDB database for the various modules of the application.',
+        'link': 'https://studyem.io/'
     },
     {
         'joining_year': '2020',
