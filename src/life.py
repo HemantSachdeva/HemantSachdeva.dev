@@ -80,15 +80,6 @@ educations = [
 experiences = [
     {
         'joining_year': '2022',
-        'duration': 'June to Present',
-        'title': 'Software Developer',
-        'company': 'Penzl',
-        'description': 'Working as a Software Developer I am responsible for developing and optimizing the APIs, MySQL Database and web applications of the project which is made to smoothen the life of educators. '
-                        'I also implemented the Tus protocol based API endpoint for highly optimized and resumable file uploads.',
-        'link': 'https://penzl.in/'
-    },
-    {
-        'joining_year': '2022',
         'duration': 'February to Present',
         'title': 'Backend Developer',
         'company': 'Studyem',
@@ -102,6 +93,15 @@ experiences = [
         'company': 'Evolution-X',
         'description': 'Evolution X is a flashable Custom ROM to bring a true Pixel feel to your Android Device at first glance, with many additional configurations at your disposal. We aim to provide frequent builds with monthly security patches from the latest AOSP source. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3.',
         'link': 'http://evolution-x.org'
+    },
+    {
+        'joining_year': '2022',
+        'duration': 'June to July',
+        'title': 'Backend Developer',
+        'company': 'Penzl',
+        'description': 'Working as a Backend Developer I Designed REST API in Python-Flask for highly optimised and resumable file uploads to the organization\'s AWS S3 bucket and insert metadata of the uploaded file to MySQL database. \
+                        Written a Selenium script for scraping free useful simulations from other websites (free to use) reducing the efforts of educators if those resources are added manually. Metadata of simulations is stored in MySQL database.',
+        'link': 'https://penzl.in/'
     },
     {
         'joining_year': '2021',
