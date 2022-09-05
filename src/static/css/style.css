@@ -293,17 +293,7 @@ button:focus {
   max-width: 570px;
   width: 100%;
 }
-.prt_logo_wrapper img {
-  position: fixed;
-  left: 50px;
-  top: 50px;
-  z-index: 2;
-  -webkit-animation: rotate 2s linear infinite;
-  -moz-animation: rotate 2s linear infinite;
-  -o-animation: rotate 2s linear infinite;
-  -ms-animation: rotate 2s linear infinite;
-  animation: rotate 2s linear infinite;
-}
+
 @-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotateY(360deg);
