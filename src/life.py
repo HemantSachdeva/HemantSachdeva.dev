@@ -123,6 +123,42 @@ experiences = [
 
 gallery = [
     {
+        'title': 'Backend Developer Internhip Certificate by Unread Innovations LLP',
+        'image': '/static/assets/images/content/gallery/internship-certificate-penzl.jpg'
+    },
+    {
+        'title': 'Appreciation Certificate by GDSC BBSBEC',
+        'image': '/static/assets/images/content/gallery/gdsc-bbsbec-core-team-lead.jpg'
+    },
+    {
+        'title': 'Course Completion from MongoDB University',
+        'image': '/static/assets/images/content/gallery/M220P_proof_of_completion.jpeg'
+    },
+    {
+        'title': 'Udemy Course Completion Certificate',
+        'image': '/static/assets/images/content/gallery/rest-apis-with-flask-and-python.jpg'
+    },
+    {
+        'title': 'Udemy Course Completion Certificate',
+        'image': '/static/assets/images/content/gallery/bash-mastery.jpg'
+    },
+    {
+        'title': 'Udemy Course Completion Certificate',
+        'image': '/static/assets/images/content/gallery/zero-to-mastery-in-python.jpg'
+    },
+    {
+        'title': 'Spoken Tutorial Linux Post Test by IIT Bombay',
+        'image': '/static/assets/images/content/gallery/spoken-tutorial-linux-post-test.jpg'
+    },
+    {
+        'title': 'Contribution to Explore ML with Crowdsource',
+        'image': '/static/assets/images/content/gallery/explore-ml-with-crowdsource-certificate.jpg'
+    },
+    {
+        'title': 'GDSC WOW Appreciation Certificate',
+        'image': '/static/assets/images/content/gallery/appreciation-certificate-gdsc-wow.jpg'
+    },
+    {
         'title': 'SQL - Datacamp',
         'image': '/static/assets/images/content/gallery/sql-datacamp.jpg'
     },
