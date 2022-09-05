@@ -105,7 +105,7 @@ experiences = [
     },
     {
         'joining_year': '2021',
-        'duration': 'March to December, 2021',
+        'duration': 'March to December',
         'title': 'Maintainer for Xiaomi Mi A3',
         'company': 'SkyHawk Recovery Project',
         'description': 'Android recovery based on TeamWin Recovery Project with rich UI and Features. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3. (currently the updates are on hold because of some encryption issues for non-dynamic partitions)',
@@ -113,7 +113,7 @@ experiences = [
     },
     {
         'joining_year': '2021',
-        'duration': 'August to September, 2021',
+        'duration': 'August to September',
         'title': 'OpenCV and Computer Vision Intern',
         'company': 'IETE, Mumbai',
         'description': 'We covered various topics like: Watermarking on an img, Face Detection and Color Detection in an Image/Video, Various GUI based image processing systems using appJar (The easiest way to create GUIs in python) Making graphs using Matplotlib, etc all in python.',
