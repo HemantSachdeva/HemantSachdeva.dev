@@ -81,9 +81,9 @@ experiences = [
     {
         'joining_year': '2022',
         'duration': 'February to Present',
-        'title': 'Backend Developer',
+        'title': 'Python Developer',
         'company': 'Studyem',
-        'description': 'Working as a Backend Developer I am responsible for developing the APIs written with Flask-RESTful libraries for performing CRUD (Create, Read, Update, Delete) operations on our MongoDB database for the various modules of the application.',
+        'description': 'Working as a Python Developer I am responsible for developing the APIs written with Flask-RESTful libraries for performing CRUD (Create, Read, Update, Delete) operations on our MongoDB database for the various modules of the application.',
         'link': 'https://studyem.io/'
     },
     {
