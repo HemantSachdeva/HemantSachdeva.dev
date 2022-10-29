@@ -47,6 +47,11 @@ contributions = [
         'name': 'Docusaurus - Meta / Facebook',
         'link': 'https://github.com/facebook/docusaurus',
         'logo': '/static/assets/images/content/clients/meta.png'
+    },
+    {
+        'name': 'Microsoft',
+        'link': 'https://github.com/microsoft/Web-Dev-For-Beginners',
+        'logo': '/static/assets/images/content/clients/microsoft.png'
     }
 ]
 
