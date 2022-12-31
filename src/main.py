@@ -15,6 +15,9 @@
 
 import os
 import sys
+
+import requests
+
 from src.life import about_me, contributions, educations, experiences, gallery
 
 try:
@@ -36,9 +39,13 @@ def bot_message(data):
     message = data.get("message")
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
     url = f"https://api.telegram.org/bot{BOT_API}/sendMessage"
-    # use curl to send the message to the bot API and the chat ID of telegram group where the bot is joined
-    os.system(
-        f"curl -s -X POST '{url}' -d chat_id={CHAT_ID} -d text='{TEXT_MESSAGE}' -d parse_mode='HTML'")
+    data = {
+        "chat_id": CHAT_ID,
+        "text": TEXT_MESSAGE,
+        "parse_mode": "HTML"
+    }
+    req = requests.post(url, data=data)
+    print(req.json())
 
 
 @application.route('/')
