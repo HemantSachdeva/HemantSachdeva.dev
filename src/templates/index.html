@@ -381,7 +381,7 @@
 								<div class="owl-carousel owl-theme">
                                     {% for org in context.contributions %}
 									<div class="item">
-										<a href="{{ org.link }}" target="_blank"><img src="{{ org.logo }}" alt="{{ org.name }}" title="{{ org.name }}"></a>
+										<a href="{{ org.link }}" target="_blank"><img src="/static/assets/images/content/clients/{{ org.logo }}" alt="{{ org.name }}" title="{{ org.name }}"></a>
                                     </div>
                                     {% endfor %}
 								</div>
@@ -414,9 +414,9 @@
 						<div class="row">
                         {% for photo in context.gallery %}
 							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<a class="imageopen" href="{{ photo.image }}" title="{{ photo.title }}">
+								<a class="imageopen" href="/static/assets/images/content/gallery/{{ photo.image }}" title="{{ photo.title }}">
 									<div class="prt_portfolio_img">
-										<img src="{{ photo.image }}" alt="Portfolio">
+										<img src="/static/assets/images/content/gallery/{{ photo.image }}" alt="Portfolio">
 										<div class="prt_portfolio_text">
 											<h4>{{ photo.title }}</h4>
 										</div>

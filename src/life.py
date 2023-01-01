@@ -6,52 +6,52 @@ contributions = [
     {
         'name': 'Evolution X',
         'link': 'http://evolution-x.org',
-        'logo': '/static/assets/images/content/clients/evolution-x.png'
+        'logo': 'evolution-x.png'
     },
     {
         'name': 'SkyHawk Recovery Project',
         'link': 'https://shrp.github.io',
-        'logo': '/static/assets/images/content/clients/shrp.png'
+        'logo': 'shrp.png'
     },
     {
         'name': 'TimeMarks',
         'link': 'https://timemarks.in/',
-        'logo': '/static/assets/images/content/clients/timemarks.png'
+        'logo': 'timemarks.png'
     },
     {
         'name': 'Studyem',
         'link': 'https://studyem.io/',
-        'logo': '/static/assets/images/content/clients/studyem.png'
+        'logo': 'studyem.png'
     },
     {
         'name': 'Penzl',
         'link': 'https://penzl.in/',
-        'logo': '/static/assets/images/content/clients/penzl.png'
+        'logo': 'penzl.png'
     },
     {
         'name': 'GDSC BBSBEC',
         'link': 'https://gdsc.community.dev/baba-banda-singh-bahadur-engineering-college-fatehgarh-sahib/',
-        'logo': '/static/assets/images/content/clients/gdsc-bbsbec.png'
+        'logo': 'gdsc-bbsbec.png'
     },
     {
         'name': 'GirlScript Summer of Code',
         'link': 'https://gssoc.girlscript.tech/',
-        'logo': '/static/assets/images/content/clients/gssoc.png'
+        'logo': 'gssoc.png'
     },
     {
         'name': 'GDSC WOW',
         'link': 'https://www.gdscwow.tech',
-        'logo': '/static/assets/images/content/clients/gdsc-wow.png'
+        'logo': 'gdsc-wow.png'
     },
     {
         'name': 'Docusaurus - Meta / Facebook',
         'link': 'https://github.com/facebook/docusaurus',
-        'logo': '/static/assets/images/content/clients/meta.png'
+        'logo': 'meta.png'
     },
     {
         'name': 'Microsoft',
         'link': 'https://github.com/microsoft/Web-Dev-For-Beginners',
-        'logo': '/static/assets/images/content/clients/microsoft.png'
+        'logo': 'microsoft.png'
     }
 ]
 
@@ -129,90 +129,90 @@ experiences = [
 gallery = [
     {
         'title': 'Backend Developer Internhip Certificate by Unread Innovations LLP',
-        'image': '/static/assets/images/content/gallery/internship-certificate-penzl.jpg'
+        'image': 'internship-certificate-penzl.jpg'
     },
     {
         'title': 'Appreciation Certificate by GDSC BBSBEC',
-        'image': '/static/assets/images/content/gallery/gdsc-bbsbec-core-team-lead.jpg'
+        'image': 'gdsc-bbsbec-core-team-lead.jpg'
     },
     {
         'title': 'Course Completion from MongoDB University',
-        'image': '/static/assets/images/content/gallery/M220P_proof_of_completion.jpeg'
+        'image': 'M220P_proof_of_completion.jpeg'
     },
     {
         'title': 'Udemy Course Completion Certificate',
-        'image': '/static/assets/images/content/gallery/rest-apis-with-flask-and-python.jpg'
+        'image': 'rest-apis-with-flask-and-python.jpg'
     },
     {
         'title': 'Udemy Course Completion Certificate',
-        'image': '/static/assets/images/content/gallery/bash-mastery.jpg'
+        'image': 'bash-mastery.jpg'
     },
     {
         'title': 'Udemy Course Completion Certificate',
-        'image': '/static/assets/images/content/gallery/zero-to-mastery-in-python.jpg'
+        'image': 'zero-to-mastery-in-python.jpg'
     },
     {
         'title': 'Spoken Tutorial Linux Post Test by IIT Bombay',
-        'image': '/static/assets/images/content/gallery/spoken-tutorial-linux-post-test.jpg'
+        'image': 'spoken-tutorial-linux-post-test.jpg'
     },
     {
         'title': 'Contribution to Explore ML with Crowdsource',
-        'image': '/static/assets/images/content/gallery/explore-ml-with-crowdsource-certificate.jpg'
+        'image': 'explore-ml-with-crowdsource-certificate.jpg'
     },
     {
         'title': 'GDSC WOW Appreciation Certificate',
-        'image': '/static/assets/images/content/gallery/appreciation-certificate-gdsc-wow.jpg'
+        'image': 'appreciation-certificate-gdsc-wow.jpg'
     },
     {
         'title': 'SQL - Datacamp',
-        'image': '/static/assets/images/content/gallery/sql-datacamp.jpg'
+        'image': 'sql-datacamp.jpg'
     },
     {
         'title': 'App Dev Team Lead',
-        'image': '/static/assets/images/content/gallery/app-dev-team-lead.jpg'
+        'image': 'app-dev-team-lead.jpg'
     },
     {
         'title': 'Python - Datacamp',
-        'image': '/static/assets/images/content/gallery/python-datacamp.jpg'
+        'image': 'python-datacamp.jpg'
     },
     {
         'title': '30 Days Google Cloud Program',
-        'image': '/static/assets/images/content/gallery/30-days-google-cloud-program.jpeg'
+        'image': '30-days-google-cloud-program.jpeg'
     },
     {
         'title': 'Awarded by SourceForge',
-        'image': '/static/assets/images/content/gallery/award-by-sfg.jpeg'
+        'image': 'award-by-sfg.jpeg'
     },
     {
         'title': 'Google Cloud Skill Badges',
-        'image': '/static/assets/images/content/gallery/google-cloud-skill-badges.png'
+        'image': 'google-cloud-skill-badges.png'
     },
     {
         'title': 'Dev Fest India 2021',
-        'image': '/static/assets/images/content/gallery/devfest-india-2021.jpeg'
+        'image': 'devfest-india-2021.jpeg'
     },
     {
         'title': 'IEEE UpSkill Malaysia 2021',
-        'image': '/static/assets/images/content/gallery/up-skill-malaysia-2021.jpeg'
+        'image': 'up-skill-malaysia-2021.jpeg'
     },
     {
         'title': 'Awarded by Google Developers',
-        'image': '/static/assets/images/content/gallery/asj-facilitator.png'
+        'image': 'asj-facilitator.png'
     },
     {
         'title': 'OpenCV Internship',
-        'image': '/static/assets/images/content/gallery/iete-opencv-internship.jpeg'
+        'image': 'iete-opencv-internship.jpeg'
     },
     {
         'title': 'Mentor at GSSoC 2021',
-        'image': '/static/assets/images/content/gallery/gssoc-mentor.jpeg',
+        'image': 'gssoc-mentor.jpeg',
     },
     {
         'title': 'Diwali With Qwiklabs 2021',
-        'image': '/static/assets/images/content/gallery/diwali-with-qwiklabs-2021.jpeg',
+        'image': 'diwali-with-qwiklabs-2021.jpeg',
     },
     {
         'title': 'Evolution X - Xiaomi Mi A3',
-        'image': '/static/assets/images/content/gallery/evolution-x-xiaomi-mi-a3.jpeg'
+        'image': 'evolution-x-xiaomi-mi-a3.jpeg'
     },
 ]
