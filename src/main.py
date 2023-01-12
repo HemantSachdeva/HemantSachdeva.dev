@@ -18,7 +18,8 @@ import sys
 
 import requests
 
-from src.life import about_me, contributions, educations, experiences, gallery
+from src.life import (about_me, blacklist, contributions, educations,
+                      experiences, gallery)
 
 try:
     from flask import Flask, render_template, request
@@ -37,6 +38,11 @@ def bot_message(data):
     email = data.get("email")
     subject = data.get("subject")
     message = data.get("message")
+
+    # Check if the sender or the message is in blacklist
+    if (name or email or subject or message) in blacklist:
+        return
+
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
     url = f"https://api.telegram.org/bot{BOT_API}/sendMessage"
     data = {
