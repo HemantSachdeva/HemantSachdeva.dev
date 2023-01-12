@@ -4,444 +4,484 @@
 <!--[if !IE]><!-->
 <html lang="en"><!--<![endif]-->
 <!-- Begin Head -->
-<head>
-<title>Who am I?</title>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="description" content="Portfolio">
-<meta name="keywords" content="Creative, minimal, Portfolio, cv, business, Resume, Information, personal portfolio, Professional">
-<meta name="author" content="Hemant Sachdeva <hemant.evolver@gmail.com>" >
-<meta name="MobileOptimized" content="320">
-<!--Srart Style -->
-<link rel="stylesheet" href="../static/css/animate.css">
-<link rel="stylesheet" href="../static/css/fonts.css">
-<link rel="stylesheet" href="../static/css/bootstrap.min.css">
-<link rel="stylesheet" href="../static/css/font-awesome.css">
-<link rel="stylesheet" href="../static/css/magnific-popup.css">
-<link rel="stylesheet" href="../static/css/owl.carousel.min.css">
-<link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
-<!-- Favicon Link -->
-<link rel="icon" type="image/x-icon" href="../static/assets/images/header/favicon.ico">
-</head>
-<body>
-<!--Preloader Start-->
-<div id="preloader">
-	<div id="status">
-		<img src="../static/assets/gif/loader.gif" alt="loader">
-	</div>
-</div>
-<!--Main Wrapper Start-->
-<div class="prt_main_wrapper">
-	<div class="prt_home_wrapper">
-		<div class="prt_menu_wrapper">
-			<a href="#about" class="prt_top">about</a>
-			<a href="#contact" class="prt_right">contact</a>
-			<a href="#services" class="prt_bottom">strength</a>
-			<a href="#portfolio" class="prt_left">gallery</a>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-5 offset-md-5 col-sm-10 offset-sm-2 col-xs-12 offset-xs-0">
-					<div class="typed-strings">
-						<h1>I am Hemant Sachdeva</h1>
-                        <h1>I am a Backend Developer</h1>
-					</div>
-					<h1 class="typed"></h1>
-				</div>
-			</div>
-		</div>
-	</div>
 
-	<!--About Wrapper Start-->
-		<div class="prt_about_wrapper prt_toppadder115">
-			<div class="prt_close_wrapper">
-				<img src="../static/assets/images/header/down_arrow.png" alt="Close" loading="lazy" class="prt_close">
-			</div>
-			<div class="container">
-				<div class="prt_about_info prt_bottompadder80">
-					<div class="row">				
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_about_img">
-								<img src="../static/assets/images/content/about.png" alt="About" loading="lazy" >
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_heading_wrapper_2">
-								<div class="prt_heading prt_toppadder50">
-									<h1>About ME</h1>
-									<div class="typed-strings">
-										<p>Who Am I</p>
-										<p>Know more</p>
-									</div>
-									<p class="typed"></p>
-								</div>
-							</div>
-							<div class="prt_about_details">
-								<p>{{context.about}}</p>
-								<a href="https://drive.google.com/file/d/1ybtlLzswFvtmvuZd-QpPumJ_iUutQ4qy/view?usp=sharing" target="_blank" class="prt_btn">Download Resume</a> <a href="https://linkedin.com/in/Hemant-Sachdeva" target="_blank" class="prt_btn">Hire Me</a>
-                                <a href="https://github.com/sponsors/HemantSachdeva" target="_blank" class="prt_btn">Sponsor Me</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="prt_about_edulearn_wrapper prt_bottompadder115">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_heading_wrapper">
-							<div class="prt_heading">
-								<h1>Education</h1>
-								<div class="typed-strings">
-									<p>Learning</p>
-								</div>
-								<p class="typed"></p>
-							</div>
-						</div>
-						<div class="prt_about_learnsection">
-							<div class="row">
-								{% for edu in context.educations %}
-								{% if edu.align == 'right' %}
-								<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-									<div class="prt_about_learnbox_left">
-								{% else %}
-								<div class="col-xl-6 offset-xl-6 col-md-12 offset-md-12 col-sm-12 col-xs-12">
-									<div class="prt_about_learnbox_right">
-								{% endif %}
-										<div class="prt_about_learnbox_year">
-											<h1>{{ edu.year }}</h1>
-										</div>
-										<div class="prt_about_learnbox_info">
-											<h4>{{ edu.title }}</h4>
-											<span>{{ edu.location }}</span>
-											<p><a href="{{ edu.link }}" target="_blank">{{ edu.institute }}</a></p>
-										</div>
-									</div>
-								</div>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="prt_about_experience_wrapper prt_bottompadder60">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_heading_wrapper">
-							<div class="prt_heading">
-								<h1>Experience</h1>
-								<div class="typed-strings">
-									<p>Involvement</p>
-									<p>Participation</p>
-								</div>
-								<p class="typed"></p>
-							</div>
-						</div>
-						<div class="prt_about_experience">
-							<div class="row">
-								{% for exp in context.experiences %}
-								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-									<div class="prt_about_experiencebox">
-										<div class="prt_about_experience_year">
-											<h1>{{ exp.joining_year }}</h1>
-											<h4>{{ exp.duration }}</h4>
-										</div>
-										<div class="prt_about_experience_info">
-											<h4>{{ exp.title }}</h4>
-											<span><a href="{{ exp.link }}" target="_blank">{{ exp.company }}</a></span>
-											<p>{{ exp.description }}</p>
-										</div>
-									</div>
-								</div>
-								{% endfor %}
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="prt_profile_info">
-					<div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="prt_heading_wrapper_2">
-								<div class="prt_heading">
-									<h1>PROFILES</h1>
-									<div class="typed-strings">
-										<p>Recent Activities</p>
-									</div>
-									<p class="typed"></p>
-								</div>
-							</div>
-							<div class="prt_profile_details">
-								<p>These are some platforms where I posts my most recent activities, awards and acheivements. Feel free to connect with me ;)</p>
-							</div>
-						</div>
-						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="prt_profile_slider">
-								<div class="owl-carousel owl-theme">
-									<a href="https://linkedin.com/in/Hemant-Sachdeva" target="_blank">
-										<div class="item">
-											<i class="fa fa-linkedin pl_clr1" aria-hidden="true"></i>
-											<h4>Linkedin</h4>
-										</div>
-									</a>
-									<a href="https://instagram.com/Hemant_007.me" target="_blank">
-										<div class="item">
-											<i class="fa fa-instagram pl_clr2" aria-hidden="true"></i>
-											<h4>Instagram</h4>
-										</div>
-									</a>
-									<a href="https://github.com/HemantSachdeva" target="_blank">
-										<div class="item">
-											<i class="fa fa-github pl_clr3" aria-hidden="true"></i>
-											<h4>GitHub</h4>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>			
-			</div>
-			{% include 'footer.html' %}
-		</div>
-	<!--Contact Wrapper Start-->
-		<div class="prt_contact_wrapper prt_toppadder115">
-			<div class="prt_close_wrapper">
-				<img src="../static/assets/images/header/right_arrow.png" alt="Close" loading="lazy" class="prt_close">
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_heading_wrapper">
-							<div class="prt_heading">
-								<h1>get in touch</h1>
-                                <div class="typed-strings">
-    								<p>contact me</p>
-                                </div>
-                                <p class="typed"></p>
-							</div>
-						</div>
-					</div>				
-					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_contact_info">
-							<h1>How may I help you ?</h1>
-							<div class="prt_contact_form">
-								<div class="row">
-									<div class="col-12">
-										<form action="send_message" method="POST">
-											<div class="row">
-												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-													<input type="text" name="name" placeholder="Your Name" class="require">
-												</div>
-												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
-													<input type="text" name="email" placeholder="Your Email" class="require" data-valid="email" data-error="Email should be valid.">
-												</div>
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<input type="text" name="subject" placeholder="Subject" class="require">
-												</div>
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<textarea rows="4" name="message" placeholder="Message" class="require"></textarea>
-												</div>
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<div class="response"></div>
-												</div>
-												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-													<button type="submit" class="prt_btn submitForm">submit</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_contact_map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.9234113846114!2d76.41803141512237!3d30.353126481771113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102973a1a3a66b%3A0x6880d3eb61bde9ac!2s840%2C%20DMW%20Railway%20Colony%2C%20Patiala%2C%20Punjab%20147003!5e0!3m2!1sen!2sin!4v1646579401824!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-						</div>
-					</div>					
-					<div class="prt_contact_details">
-						<div class="row">
-							<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-								<div class="prt_contact_details_box details_box1">
-									<h4>Phone</h4>
-									<p>+91-9041669596</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-								<div class="prt_contact_details_box details_box2">
-									<h4>Email</h4>
-									<p>hemant.evolver@gmail.com<br>hemant.1900670@bbsbec.ac.in</p>
-								</div>
-							</div>
-							<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-								<div class="prt_contact_details_box details_box3">
-									<h4>Address</h4>
-									<p>840, DMW Railway Colony<br>Patiala, Punjab, India<br>147003</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			{% include 'footer.html' %}
-		</div>
-	<!--Services Wrapper Start-->
-		<div class="prt_services_wrapper prt_toppadder115">
-			<div class="prt_close_wrapper">
-				<img src="../static/assets/images/header/up_arrow.png" alt="Close" loading="lazy" class="prt_close">
-			</div>
-			<div class="prt_services_slider_wrapper prt_bottompadder115">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_heading_wrapper">
-								<div class="prt_heading">
-									<h1>What I do</h1>
-									<div class="typed-strings">
-										<p>take a look</p>
-									</div>
-									<p class="typed"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_services_slider_imgs">
-								<img class="img_1 active" src="../static/assets/images/content/serv_linux.png" alt="Service" loading="lazy">
-								<img class="img_2" src="../static/assets/images/content/serv_python.jpg" alt="Service" loading="lazy">
-								<img class="img_3" src="../static/assets/images/content/serv_git.jpg" alt="Service" loading="lazy">
-								<img class="img_4" src="../static/assets/images/content/serv_backend.jpg" alt="Service" loading="lazy">
-							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-							<div class="prt_services_slider_box">
-								<div class="prt_services_slider_text prt_img_click active" id="1">
-									<img src="../static/assets/images/content/serv_linux_icon.png" alt="Service icon" loading="lazy">
-									<h4>Linux Enthusiast</h4>
-									<p>Using linux to get rid of auto updates and get complete control on system.</p>
-								</div>
-								<div class="prt_services_slider_text prt_img_click" id="2">
-									<img src="../static/assets/images/content/serv_python_icon.png" alt="Service icon" loading="lazy">
-									<h4>Python Programmer</h4>
-									<p>Love to make CLI programs, WebApps, RESTFul APIs & a bit AI/ML.</p>
-								</div>
-								<div class="prt_services_slider_text prt_img_click" id="3">
-									<img src="../static/assets/images/content/serv_git_icon.png" alt="Service icon" loading="lazy">
-									<h4>Git >> Everything</h4>
-									<p>Haha, I am incomplete without Git & GitHub.</p>
-								</div>
-								<div class="prt_services_slider_text prt_img_click" id="4">
-									<img src="../static/assets/images/content/serv_backend_icon.png" alt="Service icon" loading="lazy">
-									<h4>Backend Development</h4>
-									<p>Developing backbone is far better than aligning a div.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prt_couter_wrapper prt_toppadder80 prt_bottompadder50">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="prt_counter_box">
-								<img src="../static/assets/images/content/counter_1.png" alt="GitHub Pull Requests" loading="lazy">
-								<h3 class="timer" data-from="0" data-to="80" data-speed="5000"></h3>
-								<p>+ GitHub PRs</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="prt_counter_box">
-								<img src="../static/assets/images/content/counter_2.png" alt="Merged Pull Requests" loading="lazy">
-								<h3 class="timer" data-from="0" data-to="75" data-speed="5000"></h3>
-								<p>+ Merged PRs</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-							<div class="prt_counter_box">
-								<img src="../static/assets/images/content/counter_3.png" alt="Users of my projects" loading="lazy">
-								<h3 class="timer" data-from="0" data-to="1000" data-speed="4000"></h3>
-								<p>+ Happy Users</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="prt_client_slider_wrapper">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_heading_wrapper">
-								<div class="prt_heading">
-									<h1>Contributing</h1>
+<head>
+    <title>Who am I?</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta name="description" content="Portfolio">
+    <meta name="keywords"
+        content="Creative, minimal, Portfolio, cv, business, Resume, Information, personal portfolio, Professional">
+    <meta name="author" content="Hemant Sachdeva <hemant.evolver@gmail.com>">
+    <meta name="MobileOptimized" content="320">
+    <!--Srart Style -->
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <link rel="stylesheet" href="../static/css/fonts.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/css/magnific-popup.css">
+    <link rel="stylesheet" href="../static/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../static/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/x-icon" href="../static/assets/images/header/favicon.ico">
+</head>
+
+<body>
+    <!--Preloader Start-->
+    <div id="preloader">
+        <div id="status">
+            <img src="../static/assets/gif/loader.gif" alt="loader">
+        </div>
+    </div>
+    <!--Main Wrapper Start-->
+    <div class="prt_main_wrapper">
+        <div class="prt_home_wrapper">
+            <div class="prt_menu_wrapper">
+                <a href="#about" class="prt_top">about</a>
+                <a href="#contact" class="prt_right">contact</a>
+                <a href="#services" class="prt_bottom">strength</a>
+                <a href="#portfolio" class="prt_left">gallery</a>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div
+                        class="col-xl-6 offset-xl-6 col-lg-6 offset-lg-6 col-md-5 offset-md-5 col-sm-10 offset-sm-2 col-xs-12 offset-xs-0">
+                        <div class="typed-strings">
+                            <h1>I am Hemant Sachdeva</h1>
+                            <h1>I am a Backend Developer</h1>
+                        </div>
+                        <h1 class="typed"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--About Wrapper Start-->
+        <div class="prt_about_wrapper prt_toppadder115">
+            <div class="prt_close_wrapper">
+                <img src="../static/assets/images/header/down_arrow.png" alt="Close" loading="lazy" class="prt_close">
+            </div>
+            <div class="container">
+                <div class="prt_about_info prt_bottompadder80">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="prt_about_img">
+                                <img src="../static/assets/images/content/about.png" alt="About" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <div class="prt_heading_wrapper_2">
+                                <div class="prt_heading prt_toppadder50">
+                                    <h1>About ME</h1>
                                     <div class="typed-strings">
-									    <p>Organizations</p>
+                                        <p>Who Am I</p>
+                                        <p>Know more</p>
                                     </div>
                                     <p class="typed"></p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="prt_client_slider">
-								<div class="owl-carousel owl-theme">
-                                    {% for org in context.contributions %}
-									<div class="item">
-										<a href="{{ org.link }}" target="_blank"><img src="/static/assets/images/content/clients/{{ org.logo }}" alt="{{ org.name }}" loading="lazy" title="{{ org.name }}"></a>
-                                    </div>
-                                    {% endfor %}
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			{% include 'footer.html' %}
-		</div>
-	<!--Portfolio Wrapper Start-->
-		<div class="prt_portfolio_wrapper prt_toppadder115">
-			<div class="prt_close_wrapper">
-				<img src="../static/assets/images/header/left_arrow.png" alt="Close" class="prt_close">
-			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="prt_heading_wrapper">
-							<div class="prt_heading">
-								<h1>Gallery</h1>
+                                </div>
+                            </div>
+                            <div class="prt_about_details">
+                                <p>{{context.about}}</p>
+                                <a href="https://drive.google.com/file/d/1ybtlLzswFvtmvuZd-QpPumJ_iUutQ4qy/view?usp=sharing"
+                                    target="_blank" class="prt_btn">Download Resume</a> <a
+                                    href="https://linkedin.com/in/Hemant-Sachdeva" target="_blank" class="prt_btn">Hire
+                                    Me</a>
+                                <a href="https://github.com/sponsors/HemantSachdeva" target="_blank"
+                                    class="prt_btn">Sponsor Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prt_about_edulearn_wrapper prt_bottompadder115">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="prt_heading_wrapper">
+                            <div class="prt_heading">
+                                <h1>Education</h1>
                                 <div class="typed-strings">
-								    <p>Framed Moments</p>
+                                    <p>Learning</p>
                                 </div>
                                 <p class="typed"></p>
-							</div>
-						</div>
-					</div>
-					<div class="prt_portfolio_box popup-gallery">
-						<div class="row">
-                        {% for photo in context.gallery %}
-							<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-								<a class="imageopen" href="/static/assets/images/content/gallery/{{ photo.image }}" title="{{ photo.title }}">
-									<div class="prt_portfolio_img">
-										<img src="/static/assets/images/content/gallery/{{ photo.image }}" alt="Portfolio" loading="lazy">
-										<div class="prt_portfolio_text">
-											<h4>{{ photo.title }}</h4>
-										</div>
-									</div>
-								</a>
                             </div>
-                        {% endfor %}
-						</div>
-					</div>
-				</div>
-			</div>
-			{% include 'footer.html' %}
-		</div>
-	</div>
-</div>
-<!--Main js file Style--> 
-<script type="text/javascript" src="../static/js/jquery.min.js"></script> 
-<script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../static/js/jquery.magnific-popup.min.js"></script>
-<script type="text/javascript" src="../static/js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="../static/js/plugin/countto/jquery.countTo.js"></script>
-<script type="text/javascript" src="../static/js/plugin/countto/jquery.appear.js"></script>
-<script type="text/javascript" src="../static/js/circles.js"></script>
-<script type="text/javascript" src="../static/js/custom.js"></script>
-<script type="text/javascript" src="../static/js/typed.min.js"></script>
-<!--Main js file End-->
+                        </div>
+                        <div class="prt_about_learnsection">
+                            <div class="row">
+                                {% for edu in context.educations %}
+                                {% if edu.align == 'right' %}
+                                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="prt_about_learnbox_left">
+                                        {% else %}
+                                        <div class="col-xl-6 offset-xl-6 col-md-12 offset-md-12 col-sm-12 col-xs-12">
+                                            <div class="prt_about_learnbox_right">
+                                                {% endif %}
+                                                <div class="prt_about_learnbox_year">
+                                                    <h1>{{ edu.year }}</h1>
+                                                </div>
+                                                <div class="prt_about_learnbox_info">
+                                                    <h4>{{ edu.title }}</h4>
+                                                    <span>{{ edu.location }}</span>
+                                                    <p><a href="{{ edu.link }}" target="_blank">{{ edu.institute }}</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prt_about_experience_wrapper prt_bottompadder60">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="prt_heading_wrapper">
+                                    <div class="prt_heading">
+                                        <h1>Experience</h1>
+                                        <div class="typed-strings">
+                                            <p>Involvement</p>
+                                            <p>Participation</p>
+                                        </div>
+                                        <p class="typed"></p>
+                                    </div>
+                                </div>
+                                <div class="prt_about_experience">
+                                    <div class="row">
+                                        {% for exp in context.experiences %}
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="prt_about_experiencebox">
+                                                <div class="prt_about_experience_year">
+                                                    <h1>{{ exp.joining_year }}</h1>
+                                                    <h4>{{ exp.duration }}</h4>
+                                                </div>
+                                                <div class="prt_about_experience_info">
+                                                    <h4>{{ exp.title }}</h4>
+                                                    <span><a href="{{ exp.link }}" target="_blank">{{ exp.company
+                                                            }}</a></span>
+                                                    <p>{{ exp.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prt_profile_info">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="prt_heading_wrapper_2">
+                                        <div class="prt_heading">
+                                            <h1>PROFILES</h1>
+                                            <div class="typed-strings">
+                                                <p>Recent Activities</p>
+                                            </div>
+                                            <p class="typed"></p>
+                                        </div>
+                                    </div>
+                                    <div class="prt_profile_details">
+                                        <p>These are some platforms where I posts my most recent activities, awards and
+                                            acheivements. Feel free to connect with me ;)</p>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="prt_profile_slider">
+                                        <div class="owl-carousel owl-theme">
+                                            <a href="https://linkedin.com/in/Hemant-Sachdeva" target="_blank">
+                                                <div class="item">
+                                                    <i class="fa fa-linkedin pl_clr1" aria-hidden="true"></i>
+                                                    <h4>Linkedin</h4>
+                                                </div>
+                                            </a>
+                                            <a href="https://instagram.com/Hemant_007.me" target="_blank">
+                                                <div class="item">
+                                                    <i class="fa fa-instagram pl_clr2" aria-hidden="true"></i>
+                                                    <h4>Instagram</h4>
+                                                </div>
+                                            </a>
+                                            <a href="https://github.com/HemantSachdeva" target="_blank">
+                                                <div class="item">
+                                                    <i class="fa fa-github pl_clr3" aria-hidden="true"></i>
+                                                    <h4>GitHub</h4>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'footer.html' %}
+                </div>
+                <!--Contact Wrapper Start-->
+                <div class="prt_contact_wrapper prt_toppadder115">
+                    <div class="prt_close_wrapper">
+                        <img src="../static/assets/images/header/right_arrow.png" alt="Close" loading="lazy"
+                            class="prt_close">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="prt_heading_wrapper">
+                                    <div class="prt_heading">
+                                        <h1>get in touch</h1>
+                                        <div class="typed-strings">
+                                            <p>contact me</p>
+                                        </div>
+                                        <p class="typed"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="prt_contact_info">
+                                    <h1>How may I help you ?</h1>
+                                    <div class="prt_contact_form">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <form action="send_message" method="POST">
+                                                    <div class="row">
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="name" placeholder="Your Name"
+                                                                class="require">
+                                                        </div>
+                                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                                            <input type="text" name="email" placeholder="Your Email"
+                                                                class="require" data-valid="email"
+                                                                data-error="Email should be valid.">
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <input type="text" name="subject" placeholder="Subject"
+                                                                class="require">
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <textarea rows="4" name="message" placeholder="Message"
+                                                                class="require"></textarea>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="response"></div>
+                                                        </div>
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <button type="submit"
+                                                                class="prt_btn submitForm">submit</button>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                <div class="prt_contact_map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.9234113846114!2d76.41803141512237!3d30.353126481771113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39102973a1a3a66b%3A0x6880d3eb61bde9ac!2s840%2C%20DMW%20Railway%20Colony%2C%20Patiala%2C%20Punjab%20147003!5e0!3m2!1sen!2sin!4v1646579401824!5m2!1sen!2sin"
+                                        width="600" height="450" style="border:0;" allowfullscreen=""
+                                        loading="lazy"></iframe>
+                                </div>
+                            </div>
+                            <div class="prt_contact_details">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="prt_contact_details_box details_box1">
+                                            <h4>Phone</h4>
+                                            <p>+91-9041669596</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="prt_contact_details_box details_box2">
+                                            <h4>Email</h4>
+                                            <p>hemant.evolver@gmail.com<br>hemant.1900670@bbsbec.ac.in</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        <div class="prt_contact_details_box details_box3">
+                                            <h4>Address</h4>
+                                            <p>840, DMW Railway Colony<br>Patiala, Punjab, India<br>147003</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'footer.html' %}
+                </div>
+                <!--Services Wrapper Start-->
+                <div class="prt_services_wrapper prt_toppadder115">
+                    <div class="prt_close_wrapper">
+                        <img src="../static/assets/images/header/up_arrow.png" alt="Close" loading="lazy"
+                            class="prt_close">
+                    </div>
+                    <div class="prt_services_slider_wrapper prt_bottompadder115">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="prt_heading_wrapper">
+                                        <div class="prt_heading">
+                                            <h1>What I do</h1>
+                                            <div class="typed-strings">
+                                                <p>take a look</p>
+                                            </div>
+                                            <p class="typed"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="prt_services_slider_imgs">
+                                        <img class="img_1 active" src="../static/assets/images/content/serv_linux.png"
+                                            alt="Service" loading="lazy">
+                                        <img class="img_2" src="../static/assets/images/content/serv_python.jpg"
+                                            alt="Service" loading="lazy">
+                                        <img class="img_3" src="../static/assets/images/content/serv_git.jpg"
+                                            alt="Service" loading="lazy">
+                                        <img class="img_4" src="../static/assets/images/content/serv_backend.jpg"
+                                            alt="Service" loading="lazy">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <div class="prt_services_slider_box">
+                                        <div class="prt_services_slider_text prt_img_click active" id="1">
+                                            <img src="../static/assets/images/content/serv_linux_icon.png"
+                                                alt="Service icon" loading="lazy">
+                                            <h4>Linux Enthusiast</h4>
+                                            <p>Using linux to get rid of auto updates and get complete control on
+                                                system.</p>
+                                        </div>
+                                        <div class="prt_services_slider_text prt_img_click" id="2">
+                                            <img src="../static/assets/images/content/serv_python_icon.png"
+                                                alt="Service icon" loading="lazy">
+                                            <h4>Python Programmer</h4>
+                                            <p>Love to make CLI programs, WebApps, RESTFul APIs & a bit AI/ML.</p>
+                                        </div>
+                                        <div class="prt_services_slider_text prt_img_click" id="3">
+                                            <img src="../static/assets/images/content/serv_git_icon.png"
+                                                alt="Service icon" loading="lazy">
+                                            <h4>Git >> Everything</h4>
+                                            <p>Haha, I am incomplete without Git & GitHub.</p>
+                                        </div>
+                                        <div class="prt_services_slider_text prt_img_click" id="4">
+                                            <img src="../static/assets/images/content/serv_backend_icon.png"
+                                                alt="Service icon" loading="lazy">
+                                            <h4>Backend Development</h4>
+                                            <p>Developing backbone is far better than aligning a div.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prt_couter_wrapper prt_toppadder80 prt_bottompadder50">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="prt_counter_box">
+                                        <img src="../static/assets/images/content/counter_1.png"
+                                            alt="GitHub Pull Requests" loading="lazy">
+                                        <h3 class="timer" data-from="0" data-to="80" data-speed="5000"></h3>
+                                        <p>+ GitHub PRs</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="prt_counter_box">
+                                        <img src="../static/assets/images/content/counter_2.png"
+                                            alt="Merged Pull Requests" loading="lazy">
+                                        <h3 class="timer" data-from="0" data-to="75" data-speed="5000"></h3>
+                                        <p>+ Merged PRs</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                    <div class="prt_counter_box">
+                                        <img src="../static/assets/images/content/counter_3.png"
+                                            alt="Users of my projects" loading="lazy">
+                                        <h3 class="timer" data-from="0" data-to="1000" data-speed="4000"></h3>
+                                        <p>+ Happy Users</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prt_client_slider_wrapper">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="prt_heading_wrapper">
+                                        <div class="prt_heading">
+                                            <h1>Contributing</h1>
+                                            <div class="typed-strings">
+                                                <p>Organizations</p>
+                                            </div>
+                                            <p class="typed"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="prt_client_slider">
+                                        <div class="owl-carousel owl-theme">
+                                            {% for org in context.contributions %}
+                                            <div class="item">
+                                                <a href="{{ org.link }}" target="_blank"><img
+                                                        src="/static/assets/images/content/clients/{{ org.logo }}"
+                                                        alt="{{ org.name }}" loading="lazy" title="{{ org.name }}"></a>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'footer.html' %}
+                </div>
+                <!--Portfolio Wrapper Start-->
+                <div class="prt_portfolio_wrapper prt_toppadder115">
+                    <div class="prt_close_wrapper">
+                        <img src="../static/assets/images/header/left_arrow.png" alt="Close" class="prt_close">
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="prt_heading_wrapper">
+                                    <div class="prt_heading">
+                                        <h1>Gallery</h1>
+                                        <div class="typed-strings">
+                                            <p>Framed Moments</p>
+                                        </div>
+                                        <p class="typed"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prt_portfolio_box popup-gallery">
+                                <div class="row">
+                                    {% for photo in context.gallery %}
+                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                                        <a class="imageopen"
+                                            href="/static/assets/images/content/gallery/{{ photo.image }}"
+                                            title="{{ photo.title }}">
+                                            <div class="prt_portfolio_img">
+                                                <img src="/static/assets/images/content/gallery/{{ photo.image }}"
+                                                    alt="Portfolio" loading="lazy">
+                                                <div class="prt_portfolio_text">
+                                                    <h4>{{ photo.title }}</h4>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% include 'footer.html' %}
+                </div>
+            </div>
+        </div>
+        <!--Main js file Style-->
+        <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../static/js/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="../static/js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="../static/js/plugin/countto/jquery.countTo.js"></script>
+        <script type="text/javascript" src="../static/js/plugin/countto/jquery.appear.js"></script>
+        <script type="text/javascript" src="../static/js/circles.js"></script>
+        <script type="text/javascript" src="../static/js/custom.js"></script>
+        <script type="text/javascript" src="../static/js/typed.min.js"></script>
+        <!--Main js file End-->
 </body>
+
 </html>
