@@ -40,7 +40,13 @@ def bot_message(data):
     message = data.get("message")
 
     # Check if the sender or the message is in blacklist
-    if name in blacklist or email in blacklist or message in blacklist:
+    fields = {
+        name,
+        email,
+        subject,
+        message
+    }
+    if fields.intersection(blacklist):
         return
 
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
