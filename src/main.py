@@ -40,7 +40,7 @@ def bot_message(data):
     message = data.get("message")
 
     # Check if the sender or the message is in blacklist
-    if (name or email or subject or message) in blacklist:
+    if name in blacklist or email in blacklist or message in blacklist:
         return
 
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
