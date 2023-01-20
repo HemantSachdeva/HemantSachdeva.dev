@@ -18,8 +18,8 @@ import sys
 
 import requests
 
-from src.life import (about_me, blacklist, contributions, educations,
-                      experiences, gallery)
+from src.life import about_me, contributions, educations, experiences, gallery
+from src.blacklist import blacklist
 
 try:
     from flask import Flask, render_template, request
@@ -47,6 +47,7 @@ def bot_message(data):
         message
     }
     if fields.intersection(blacklist):
+        print("[!] Blacklisted message received")
         return
 
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"

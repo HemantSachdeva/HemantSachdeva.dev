@@ -216,8 +216,3 @@ gallery = [
         'image': 'evolution-x-xiaomi-mi-a3.jpeg'
     },
 ]
-
-blacklist = [
-    "Crytoglath",
-    "glath",
-]
