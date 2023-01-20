@@ -218,5 +218,6 @@ gallery = [
 ]
 
 blacklist = [
-    "Crytoglath"
+    "Crytoglath",
+    "glath",
 ]
