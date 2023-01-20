@@ -132,12 +132,24 @@ gallery = [
         'image': 'internship-certificate-penzl.jpg'
     },
     {
-        'title': 'Appreciation Certificate by GDSC BBSBEC',
-        'image': 'gdsc-bbsbec-core-team-lead.jpg'
+        'title': '3 Year Participation Certificate by Evolution X',
+        'image': 'participation-letter-evolution-x.jpg'
     },
     {
         'title': 'Course Completion from MongoDB University',
         'image': 'M220P_proof_of_completion.jpeg'
+    },
+    {
+        'title': 'Appreciation Certificate by GDSC BBSBEC',
+        'image': 'gdsc-bbsbec-core-team-lead.jpg'
+    },
+    {
+        'title': 'Digital badge by Postman',
+        'image': 'postman-student-expert.png'
+    },
+    {
+        'title': 'IEEE UpSkill Malaysia 2021',
+        'image': 'up-skill-malaysia-2021.jpeg'
     },
     {
         'title': 'Udemy Course Completion Certificate',
@@ -192,8 +204,8 @@ gallery = [
         'image': 'devfest-india-2021.jpeg'
     },
     {
-        'title': 'IEEE UpSkill Malaysia 2021',
-        'image': 'up-skill-malaysia-2021.jpeg'
+        'title': 'Evolution X - Xiaomi Mi A3',
+        'image': 'evolution-x-xiaomi-mi-a3.jpeg'
     },
     {
         'title': 'Awarded by Google Developers',
@@ -210,9 +222,5 @@ gallery = [
     {
         'title': 'Diwali With Qwiklabs 2021',
         'image': 'diwali-with-qwiklabs-2021.jpeg',
-    },
-    {
-        'title': 'Evolution X - Xiaomi Mi A3',
-        'image': 'evolution-x-xiaomi-mi-a3.jpeg'
     },
 ]
