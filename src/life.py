@@ -84,16 +84,34 @@ educations = [
 
 experiences = [
     {
+        'joining_year': '2023',
+        'duration': 'Feb to Present',
+        'title': 'Enthusiast at MongoDB Community',
+        'company': 'MongoDB',
+        'description': 'The MongoDB Community Advocacy Program is a global community for passionate and dedicated MongoDB advocates. The program enables enthusiastic program members to grow their knowledge, profile and leadership through engagement and advocacy of all users of MongoDB technologies. \
+                        Community Champions and Community Enthusiasts keep the community informed and excited about our latest developments and offerings. They are the trusted bridge between MongoDB and the organizers, contributors, and creators who represent the backbone of our community. \
+                        The Enthusiasts tier of the Community Advocacy Program consists of community members of all knowledge levels who are interested in expanding their role in the advocacy and knowledge of MongoDB’s community and technology.',
+        'link': 'https://www.mongodb.com/blog/post/mongodb-welcomes-new-community-advocacy-program-members'
+    },
+    {
+        'joining_year': '2023',
+        'duration': 'Feb to Present',
+        'title': 'Associate Software Engineer',
+        'company': 'H & R Block',
+        'description': '',
+        'link': 'https://www.hrblock.com/'
+    },
+    {
         'joining_year': '2022',
-        'duration': 'February to Present',
+        'duration': 'Mar to Feb, 2023',
         'title': 'Python Developer',
         'company': 'Studyem',
-        'description': 'Working as a Python Developer I am responsible for developing the APIs written with Flask-RESTful libraries for performing CRUD (Create, Read, Update, Delete) operations on our MongoDB database for the various modules of the application.',
+        'description': 'Working as a Python Developer I authored 50+ RestFul APIs written in Python-Flask for performing CRUD (Create, Read, Update, Delete) operations on our MongoDB database for the various modules of the application. User profile sections, leaderboard, reward distribution for poll winners in a channel chat includes my major contributions of all',
         'link': 'https://studyem.io/'
     },
     {
         'joining_year': '2020',
-        'duration': 'October to Present',
+        'duration': 'Feb to Jan, 2023',
         'title': 'Maintainer for Xiaomi Mi A3',
         'company': 'Evolution-X',
         'description': 'Evolution X is a flashable Custom ROM to bring a true Pixel feel to your Android Device at first glance, with many additional configurations at your disposal. We aim to provide frequent builds with monthly security patches from the latest AOSP source. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3.',
@@ -101,7 +119,7 @@ experiences = [
     },
     {
         'joining_year': '2022',
-        'duration': 'June to July',
+        'duration': 'Jun to Jul',
         'title': 'Backend Developer',
         'company': 'Penzl',
         'description': 'Working as a Backend Developer I Designed REST API in Python-Flask for highly optimised and resumable file uploads to the organization\'s AWS S3 bucket and insert metadata of the uploaded file to MySQL database. \
@@ -110,7 +128,7 @@ experiences = [
     },
     {
         'joining_year': '2021',
-        'duration': 'March to December',
+        'duration': 'Mar to Dec',
         'title': 'Maintainer for Xiaomi Mi A3',
         'company': 'SkyHawk Recovery Project',
         'description': 'Android recovery based on TeamWin Recovery Project with rich UI and Features. As an official maintainer, I am responsible for maintaining Xiaomi Mi A3. (currently the updates are on hold because of some encryption issues for non-dynamic partitions)',
@@ -118,7 +136,7 @@ experiences = [
     },
     {
         'joining_year': '2021',
-        'duration': 'August to September',
+        'duration': 'Aug to Sep',
         'title': 'OpenCV and Computer Vision Intern',
         'company': 'IETE, Mumbai',
         'description': 'We covered various topics like: Watermarking on an img, Face Detection and Color Detection in an Image/Video, Various GUI based image processing systems using appJar (The easiest way to create GUIs in python) Making graphs using Matplotlib, etc all in python.',
