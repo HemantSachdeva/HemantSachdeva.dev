@@ -19,7 +19,6 @@ import sys
 import requests
 
 from src.life import about_me, contributions, educations, experiences, gallery
-from src.blacklist import blacklist
 
 try:
     from flask import Flask, render_template, request
@@ -27,6 +26,10 @@ except ImportError:
     sys.exit("[!] Flask module not found. Install it by 'pip3 install flask'")
 
 application = Flask(__name__)
+
+RECAPTCHA_SITE_KEY = os.getenv("SITE_KEY")
+RECAPTCHA_SECRET_KEY = os.getenv("SECRET_KEY")
+RECAPTCHA_VERIFY_URL = "https://www.google.com/recaptcha/api/siteverify"
 
 
 def bot_message(data):
@@ -46,9 +49,6 @@ def bot_message(data):
         subject,
         message
     }
-    if fields.intersection(blacklist):
-        print("[!] Blacklisted message received")
-        return
 
     TEXT_MESSAGE = f"Name: <code>{name}</code>\nEmail: <code>{email}</code>\nSubject: <code>{subject}</code>\nMessage: <code>{message}</code>"
     url = f"https://api.telegram.org/bot{BOT_API}/sendMessage"
@@ -57,8 +57,7 @@ def bot_message(data):
         "text": TEXT_MESSAGE,
         "parse_mode": "HTML"
     }
-    req = requests.post(url, data=data)
-    print(req.json())
+    requests.post(url, data=data)
 
 
 @application.route('/')
@@ -70,11 +69,19 @@ def index():
         'experiences': experiences,
         'gallery': gallery
     }
-    return render_template('index.html', context=context)
+    return render_template('index.html', context=context, site_key=RECAPTCHA_SITE_KEY)
 
 
 @application.route('/send_message', methods=['POST'])
 def send_message():
     data = request.form.to_dict()
+
+    recaptcha_secret_response = request.form['g-recaptcha-response']
+
+    verify_response = requests.post(
+        url=f'{RECAPTCHA_VERIFY_URL}?secret={RECAPTCHA_SECRET_KEY}&response={recaptcha_secret_response}').json()
+
+    if verify_response['success'] == False or verify_response['score'] < 0.5:
+        return
     bot_message(data)
     return render_template('index.html', context=None)
