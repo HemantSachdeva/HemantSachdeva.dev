@@ -25,8 +25,11 @@ try:
     from flask_wtf import FlaskForm
     from wtforms import StringField, TextAreaField
     from wtforms.validators import DataRequired, Email
-except ImportError:
-    sys.exit("[!] Flask module not found. Install it by 'pip3 install flask'")
+    # tell which module not installed
+except ModuleNotFoundError as e:
+    module = str(e).split(" ")[-1]
+    print(f"Please install {module} module to continue.")
+    sys.exit(1)
 
 application = Flask(__name__)
 application.secret_key = os.getenv("APP_SECRET_KEY")
